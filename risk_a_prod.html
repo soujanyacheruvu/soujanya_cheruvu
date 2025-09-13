@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Risk Is More Product Than You Think – Blog</title>
+  <meta name="description" content="A clean, Gamma-style article layout you can drop into soujanyacheruvu.com and reuse for future posts." />
+  <style>
+    /* --- Simple, Gamma-inspired aesthetic --- */
+    :root{
+      --bg:#0b0c0f;           /* page background */
+      --card:#111319;         /* card background */
+      --muted:#a9b0c1;        /* secondary text */
+      --text:#e6eaf2;         /* primary text */
+      --accent:#8bd3ff;       /* accent line */
+      --maxw: 860px;          /* readable width */
+      --radius: 18px;         /* soft round corners */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f6f7fb; --card:#ffffff; --text:#0e1116; --muted:#586174; --accent:#0ea5e9; }
+      body{ background-image: radial-gradient(40vw 40vw at 10% -10%, #e7f5ff 0, transparent 60%), radial-gradient(60vw 60vw at 110% -20%, #ffe8e8 0, transparent 60%); }
+    }
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+
+    .wrap{ max-width:var(--maxw); margin:0 auto; padding:24px; }
+
+    header.site{
+      position:sticky; top:0; z-index:10; backdrop-filter: saturate(120%) blur(6px);
+      background: linear-gradient(to bottom, rgba(11,12,15,.75), rgba(11,12,15,0));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .site__inner{ max-width:var(--maxw); margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; }
+    .brand{ font-weight:700; letter-spacing:.2px; }
+    nav a{ color:var(--muted); text-decoration:none; margin-left:18px; font-size:14px }
+    nav a:hover{ color:var(--text) }
+
+    .hero{
+      margin-top:28px; margin-bottom:18px; padding:28px; background:var(--card); border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero h1{ font-size:36px; line-height:1.15; margin:0 0 10px }
+    .hero p{ color:var(--muted); margin:6px 0 0 }
+
+    .meta{ display:flex; gap:12px; align-items:center; color:var(--muted); font-size:14px; margin-top:10px }
+    .pill{ padding:4px 10px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); }
+
+    .bar{ height:2px; background:linear-gradient(90deg, transparent, var(--accent), transparent); margin:22px 0; opacity:.9 }
+
+    /* Card-like sections */
+    section.card{
+      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:24px; margin:16px 0;
+    }
+    section.card h2{ font-size:22px; margin:0 0 10px }
+    section.card p{ margin:10px 0 }
+    section.card ul{ margin:10px 0 0 18px }
+
+    blockquote{
+      margin:18px 0; padding:14px 16px; border-left:3px solid var(--accent);
+      background: rgba(255,255,255,.04); border-radius:10px; color:var(--text);
+    }
+
+    .stat{ display:inline-block; padding:10px 12px; border-radius:12px; border:1px dashed rgba(255,255,255,.12); font-weight:600 }
+
+    footer.site{ color:var(--muted); font-size:13px; text-align:center; padding:36px 0 60px }
+
+    /* Mobile tweaks */
+    @media (max-width:520px){
+      .hero h1{ font-size:28px }
+      .wrap{ padding:16px }
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="site__inner">
+      <div class="brand">Soujanya Cheruvu</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/blog.html" aria-current="page">Blog</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article>
+      <div class="hero">
+        <h1>Risk Is More Product Than You Think</h1>
+        <p>Risk isn’t a side-process. It shapes the experience, growth, and trust of your product.</p>
+        <div class="meta">
+          <span class="pill">Risk & Product</span>
+          <span>•</span>
+          <time datetime="2025-09-12">Sep 12, 2025</time>
+        </div>
+      </div>
+
+      <div class="bar"></div>
+
+      <section class="card">
+        <h2>Everyday Risk Moments</h2>
+        <p>Customers don’t experience “risk flows.” They experience the product:</p>
+        <ul>
+          <li>Asked for ID at signup → drop-off if it’s heavy.</li>
+          <li>Legit payment declined → lost revenue and trust.</li>
+          <li>Account paused for review → anxiety and churn risk.</li>
+          <li>Smooth login and approvals → safety felt, loyalty reinforced.</li>
+        </ul>
+        <p class="stat">63% abandon onboarding if it’s too long/complex (Signicat 2022)</p>
+      </section>
+
+      <section class="card">
+        <h2>The Friction Paradox</h2>
+        <p>Risk must add just enough friction to protect the business — but not so much that it pushes good users away. This is a design problem, not just a compliance task.</p>
+        <p class="stat">False declines cost merchants $118B in 2023 (Aite‑Novarica)</p>
+      </section>
+
+      <section class="card">
+        <h2>Why It’s a Product Decision</h2>
+        <ul>
+          <li><strong>Who gets in</strong> — onboarding rules and checks.</li>
+          <li><strong>What they can do</strong> — limits, controls, and permissions.</li>
+          <li><strong>How trust grows</strong> — feature unlocks and fast paths.</li>
+          <li><strong>When to stop</strong> — fraud/abuse detection and actions.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Growth Runs on Trust</h2>
+        <p>Good risk feels invisible and speeds up good users. Bad risk is unforgettable — it breaks the journey. Treat risk like product and you build durable growth.</p>
+        <blockquote>“Risk done right builds trust. Risk done wrong kills growth.”</blockquote>
+      </section>
+
+      <section class="card">
+        <h2>Key Takeaway</h2>
+        <p>Risk isn’t a bolt‑on. It’s part of how your product works every second. Design it with the same care as any core feature.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      © 2025 Soujanya Cheruvu · <a href="/" style="color:inherit">soujanyacheruvu.com</a>
+    </div>
+  </footer>
+</body>
+</html>
